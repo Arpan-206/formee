@@ -13,7 +13,7 @@ from formee.auth.visitor_settings import load_visitor_settings
 
 def main():
     # Loading the title
-    title = Figlet(font='slant')
+    title = Figlet(font='avatar')
     print(f"[red]{title.renderText('Formee')}")
     if not check_login():
         register_or_login = prompt([

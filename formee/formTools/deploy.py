@@ -109,5 +109,6 @@ def deploy():
         else:
             print("[red]Invalid question type.")
             return
-
+    print("[green]Form deployed successfully.")
+    print("[green]Form ID: " + str(retured_form_id))
     return retured_form_id

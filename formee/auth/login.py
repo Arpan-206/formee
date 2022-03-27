@@ -5,6 +5,7 @@ from PyInquirer import prompt
 from rich import print
 
 from formee.auth.validate import validate_user
+from formee.auth.hasher import hash_password
 DEST_DIR = os.path.expanduser('~')
 DEST_PATH = os.path.join(DEST_DIR, '.formee.yml')
 
@@ -22,6 +23,7 @@ def login():
             'name': 'password',
             'message': 'Enter your password:',
             'validate': lambda val: val != '',
+            'filter': lambda val: hash_password(val)
         },
     ]
     answers = prompt(questions)

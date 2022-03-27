@@ -7,7 +7,7 @@ from rich import print
 
 from formee.auth.visitor_jwt import get_visitor_jwt
 from formee.auth.login import DEST_PATH
-
+from formee.auth.hasher import hash_password
 
 def registerPrompt():
     questions = [
@@ -22,6 +22,7 @@ def registerPrompt():
             'name': 'password',
             'message': 'Enter your password:',
             'validate': lambda val: val != '',
+            'filter': lambda val: hash_password(val)
         },
     ]
     answers = prompt(questions)
