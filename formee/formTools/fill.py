@@ -41,14 +41,16 @@ query GetForm($id: Int!) {
 """)
 
 answer_mutation = gql("""
-mutation AnswerForm($data: json!, $form: Int!, $filled_by: String) {
-  insert_answers_one(object: {data: $data, form: $form, filled_by: $filled_by}) {
+mutation AnswerForm($data: json!, $filled_by: String!, $form: Int!, $form_creator: String!) {
+  insert_answers_one(object: {filled_by: $filled_by, data: $data, form: $form, form_creator: $form_creator}) {
     data
     filled_by
     form
+    form_creator
     id
   }
-}""")
+}
+""")
 
 
 def get_form_details(id):
@@ -111,7 +113,7 @@ def fill_prompt():
     else:
         usrname = usr_data['username']
     answer_return = client.execute(answer_mutation, variable_values={"data": json.dumps(
-        ques_answers), "form": form_details['id'], "filled_by": usrname})['insert_answers_one']
+        ques_answers), "form": form_details['id'], "filled_by": usrname, "form_creator": form_details['User']['username'] })['insert_answers_one']
     print(f"[green] Form filled successfully.")
 
     return answer_return

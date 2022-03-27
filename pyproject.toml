@@ -1,8 +1,11 @@
 [tool.poetry]
 name = "formee"
-version = "0.1.1"
-description = ""
-authors = ["Arpan Pandey <arpanpandey.aps@gmail.com>"]
+version = "0.1.2"
+description = "Formee is a tool that provides an easy way to create, edit and manage all of your forms from the command line. It uses a powerful GraphQL API and strives to make the process of working with forms as easy and simple as possible."
+authors = ["Arpan Pandey <arpan@hackersreboot.tech>"]
+license = "MIT"
+repository = "https://github.com/Arpan-206/formee"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -17,6 +20,9 @@ aiohttp = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+
+[tool.poetry.scripts]
+formee = 'formee.__main__:main'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
