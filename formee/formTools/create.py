@@ -1,11 +1,9 @@
-import sys
-
 import yaml
 from PyInquirer import prompt
 from rich import print
 
 
-def create_form():
+def create_form() -> None:
     initial_details = prompt([
         {
             'type': 'input',
@@ -32,7 +30,11 @@ def create_form():
     print(f"[bold]Form created successfully.")
 
 
-def create_questions():
+def create_questions() -> list:
+    """
+    Returns:
+        list: Questions to be asked in the form
+    """
     questions = []
     question_prompt = [
         {

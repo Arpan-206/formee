@@ -1,0 +1,127 @@
+
+site_name: Formee
+repo_name: 'formee'
+repo_url: 'https://github.com/Arpan-206/formee'
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/Arpan-206
+
+# Navigation
+# There is no 'nav' in this config because we use mkdocs-awesome-pages-plugin
+# The ordering of pages in the docs folder are now in a `.pages` file instead
+
+theme:
+    name: material
+    custom_dir: docs/docs_assets/theme/
+    palette:
+        # scheme: preference uses dark or light mode based on user (OS) preference
+        - scheme: default
+          toggle:
+            icon: material/weather-sunny
+            name: Switch to dark mode
+          primary: orange
+          accent: yellow
+        - scheme: slate
+          toggle:
+            icon: material/weather-night
+            name: Switch to light mode
+          primary: orange
+          accent: yellow  
+
+    icon:
+        logo: fontawesome/solid/book
+    favicon: './docs_assets/images/logo.svg'
+    language: 'en'
+
+
+plugins:
+    - search
+    - minify:
+        minify_html: true
+    - git-revision-date-localized:
+        type: timeago
+    - git-authors:
+        show_contribution: True
+    - mkdocstrings
+    - table-reader
+    - img2fig
+    - mknotebooks:
+        execute: false
+        # mkdocs-material theme has nicer cell styling
+        enable_default_jupyter_cell_styling: false
+        enable_default_pandas_dataframe_styling: true
+    - awesome-pages
+    - enumerate-headings
+    - print-site:
+        exclude:
+            - archive/*
+
+
+markdown_extensions:
+    - codehilite
+    - markdown.extensions.admonition
+    - markdown.extensions.attr_list
+    - markdown.extensions.codehilite:
+        guess_lang: false
+    - markdown.extensions.def_list
+    - markdown.extensions.footnotes
+    - markdown.extensions.meta
+    - markdown.extensions.toc:
+        permalink: true
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.snippets:
+        check_paths: true
+    - pymdownx.superfences
+    - pymdownx.tabbed
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+# Lots of other settings
+edit_uri: edit/MkDocs/docs/
+use_directory_urls: false
+
+extra_css:
+  - docs_assets/stylesheets/pdf-export.css
+  - docs_assets/stylesheets/scroller.css
+  - docs_assets/stylesheets/main.css
+
+# Setup mathjax, see
+# https://squidfunk.github.io/mkdocs-material/reference/mathjax/
+extra_javascript:
+    - docs_assets/javascripts/config.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HackersReboot
+    - icon: fontawesome/brands/github
+      link: https://github.com/Arpan-206
+    - icon: fontawesome/brands/hashnode
+      link: https://hashnode.com/@Aero
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arpan-pandey/
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.

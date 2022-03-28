@@ -2,14 +2,16 @@ import os
 
 import requests
 import yaml
+from formee.auth.hasher import hash_password
+from formee.auth.login import DEST_PATH
+from formee.auth.visitor_jwt import get_visitor_jwt
 from PyInquirer import prompt
 from rich import print
 
-from formee.auth.visitor_jwt import get_visitor_jwt
-from formee.auth.login import DEST_PATH
-from formee.auth.hasher import hash_password
 
-def registerPrompt():
+def registerPrompt() -> None:
+    """
+    """
     questions = [
         {
             'type': 'input',
@@ -30,11 +32,21 @@ def registerPrompt():
     if usr_registered:
         print(f"[green]User {answers['username']} registered successfully.")
     else:
-        print(f"[red]User {answers['username']} not registered. Try new username.")
+        print(
+            f"[red]User {answers['username']} not registered. Try new username.")
         registerPrompt()
 
 
-def register(username, password):
+def register(username: str, password: str) -> bool:
+    """
+
+    Args:
+        username (str): Username of the user to be registered
+        password (str): Password of the user to be registered
+
+    Returns:
+        bool: True when registration is successful
+    """
     url = 'https://hrbt-portal.hasura.app/api/rest/createUser'
     headers = {'Content-Type': 'application/json',
                'Authorization': 'Bearer ' + get_visitor_jwt()}
@@ -43,6 +55,5 @@ def register(username, password):
     if response.status_code == 200:
         yaml.dump({'username': username, 'password': password, 'visitor': False},
                   open(DEST_PATH, 'w'))
-                  
-    return response.status_code == 200
 
+    return response.status_code == 200

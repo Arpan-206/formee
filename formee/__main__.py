@@ -11,7 +11,8 @@ from formee.auth.register import registerPrompt
 from formee.auth.user_jwt import get_user_jwt
 from formee.auth.visitor_settings import load_visitor_settings
 
-def main():
+
+def main() -> None:
     # Loading the title
     title = Figlet(font='avatar')
     print(f"[red]{title.renderText('Formee')}")
@@ -38,7 +39,7 @@ def main():
         print(f"[green]Hi Visitor!")
     else:
         print("[blue] Welcome to Formee! Logged in as [bold]{}".format(
-        usr_data['username']))
+            usr_data['username']))
     # Loading the questions
     action = [
         {
@@ -65,6 +66,10 @@ def main():
                 Separator('= Deploy a form ='),
                 {
                     'name': 'Deploy a form'
+                },
+                Separator('= View Responses ='),
+                {
+                    'name': 'View responses from a form'
                 },
                 Separator('= Exit ='),
                 {
@@ -102,6 +107,11 @@ def main():
         from formee.formTools.fill import fill_prompt
         fill_prompt()
         sys.exit(0)
+    elif answers['action'] == 'View responses from a form':
+        from formee.formTools.responses import get_responses
+        get_responses()
+        sys.exit(0)
+
 
 if __name__ == '__main__':
     main()

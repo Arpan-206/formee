@@ -1,16 +1,20 @@
 import os
 
 import yaml
+from formee.auth.hasher import hash_password
+from formee.auth.validate import validate_user
 from PyInquirer import prompt
 from rich import print
 
-from formee.auth.validate import validate_user
-from formee.auth.hasher import hash_password
 DEST_DIR = os.path.expanduser('~')
 DEST_PATH = os.path.join(DEST_DIR, '.formee.yml')
 
 
-def login():
+def login() -> bool:
+    """
+    Returns:
+        bool: True when login is successful
+    """
     questions = [
         {
             'type': 'input',

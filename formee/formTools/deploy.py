@@ -1,8 +1,10 @@
-from rich import print
+from typing import Any
+
+from formee.auth.user_jwt import get_user_jwt
 from formee.formTools.read import read_form
 from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport
-from formee.auth.user_jwt import get_user_jwt
+from rich import print
 
 transport = AIOHTTPTransport(url="https://hrbt-portal.hasura.app/v1/graphql",
                              headers={'Authorization': 'Bearer ' + get_user_jwt()})
@@ -81,7 +83,12 @@ mutation AddChoices($question: uuid!, $title: String!) {
 """)
 
 
-def deploy():
+def deploy() -> Any:
+    """
+
+    Returns:
+        Any: None if unsuccessful, else the form id
+    """
     form_data = read_form()
     if form_data is None:
         print("[red]No form found. Exiting.")
@@ -96,7 +103,7 @@ def deploy():
                            'form': retured_form_id, 'title': question['question']})
         elif question['type'] == 'Options':
             ques_id = client.execute(add_options_ques, variable_values={
-                           'form': retured_form_id, 'title': question['question']})
+                'form': retured_form_id, 'title': question['question']})
             for choice in question['options']:
                 client.execute(add_choices, variable_values={
                                'question': ques_id['insert_ques_options']['returning'][0]['id'], 'title': choice})

@@ -1,9 +1,15 @@
-from yaml.parser import ParserError
 import yaml
-from rich import print
-from PyInquirer import prompt, Validator, ValidationError
 from formee.formTools.validators import NumberValidator
-def read_form():
+from PyInquirer import prompt
+from rich import print
+from yaml.parser import ParserError
+
+
+def read_form() -> dict:
+    """
+    Returns:
+        dict: The data of the form
+    """
     form_path = prompt([
         {
             'type': 'input',
@@ -24,7 +30,8 @@ def read_form():
         read_form()
     return form
 
-def display_form_data():
+
+def display_form_data() -> None:
     form = read_form()
     print(f"\n[bold]Name: {form['name']}")
     print(f"Description: {form['description']}")
@@ -37,7 +44,14 @@ def display_form_data():
             print(f"Options: {question['options']}")
         print(f"Required: {question['required']}")
 
-def read_form_file(form_path):
+
+def read_form_file(form_path: str) -> dict:
+    """
+    Args:
+        form_path (str): The path to the form file
+    Returns:
+        dict: The data of the form
+    """
     try:
         form = yaml.safe_load(open(form_path, 'r'))
         try:
@@ -53,19 +67,13 @@ def read_form_file(form_path):
         return 'File not found'
     return form
 
-def try_form():
+
+def try_form() -> None:
+    """
+    """
     form = read_form()
     form_data = {}
 
-    class InputValidator(Validator):
-        def validate(self, document):
-            try:
-                form['questions']
-            except KeyError:
-                raise ValidationError(
-                    message='Invalid content in YAML file',
-                    cursor_position=len(document.text)
-                )
     for question in form['questions']:
         if question['type'] == 'Text':
             form_data[question['question']] = prompt([

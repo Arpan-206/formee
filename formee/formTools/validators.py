@@ -1,7 +1,8 @@
-from PyInquirer import Validator, ValidationError
+from PyInquirer import ValidationError, Validator
+
 
 class NumberValidator(Validator):
-    def validate(self, document):
+    def validate(self, document: str) -> None:
         try:
             int(document.text)
         except ValueError:
