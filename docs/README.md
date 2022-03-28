@@ -37,6 +37,10 @@ pip3 install formee
 ```bash
 python3 -m formee
 ```
+Or just
+```bash
+formee
+```
 3. You're good to go.
 
 ## Project layout

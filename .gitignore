@@ -5,3 +5,5 @@ poetry.lock
 venv/
 .vscode/
 dist/
+Makefile
+site/
