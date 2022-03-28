@@ -1,27 +1,23 @@
-# Installation
+# Installing the CLI
 
-It is very easy to install dependencies and stuff for this module and run this program.
+1. Install *formee* with pip
 
-## Cloning the repo
-```shell
-git clone https://github.com/Arpan-206/Web3-CLI.git
+```bash
+pip3 install formee
 ```
 
-## Installing the required dependencies
-```shell
-pip3 install -r requirements.txt
-```
+2. Use the Github repository
 
-## Installing the required dependencies for documentation
-```shell
-pip3 install -r docs-requirement.txt
-```
+    ```bash
+    git clone https://github.com/Arpan-206/formee.git
+    cd formee
+    ```
 
-## The following are the dependencies for this project
-This program depends on the following dependencies. Huge shoutout to all the maintainers and contributors of these packages.  
-
-* [PyInquirer](https://github.com/CITGuru/PyInquirer)
-* [termcolor](https://pypi.org/project/termcolor/)
-* [thirdweb-sdk](https://thirdweb.com)
-* [python-dotenv](https://pypi.org/project/python-dotenv/)
-* [pyfiglet](https://pypi.org/project/pyfiglet/)
+    - If you use poetry, then:
+        ```bash
+        poetry install
+        ```
+    - Otherwise, use pip
+        ```bash
+        pip3 install -r requirements.txt
+        ```

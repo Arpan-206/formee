@@ -1,19 +1,22 @@
 # Getting Started
 
-## First clone the repository    
-You will need to clone the repository locally.
-```shell
-git clone https://github.com/Arpan-206/Web3-CLI.git
+## First install the CLI
+
+Install the CLI with pip or Github repository.
+
+Instructions can be found in the [Installation](/installation.html) section.
+
+## Then run the command
+
+```bash
+python3 -m formee
 ```
 
-## Then install the required dependencies    
-Then you will need to install the required dependencies.
-```shell
-pip3 install -r requirements.txt
-```
+Or just
 
-## Run the program
-Now, you can run the program by just running the main file.
-```shell
-python3 main.py
+```bash
+formee
 ```
+## Then you're good to go.
+
+Follow the tutorials to learn how to use the CLI.
