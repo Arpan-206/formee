@@ -44,19 +44,14 @@ formee
 3. You're good to go.
 
 ## License
-
 [MIT](https://github.com/Arpan-206/formee/blob/main/LICENSE)
 
 ## Roadmap
 
 - Add more type of fields
-
 - Work on security
-
 - Work on Auth
-
 - Improve WebUI
-
 - Improve runtime
 
 
@@ -66,14 +61,10 @@ formee
 
 
 ## Feedback
-
-If you have any feedback, please reach out to us at arpan@hackersreboot.tech.
+If you have any feedback, please reach out to us at [arpan@hackersreboot.tech](mailto:arpan@hackersreboot.tech).
 
 
 ## Contributing
-
 Contributions are always welcome!
-
 See `contributing.md` for ways to get started.
-
 Please adhere to this project's `code of conduct`.

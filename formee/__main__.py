@@ -8,7 +8,6 @@ from rich import print
 from formee.auth.check import check_login
 from formee.auth.login import login
 from formee.auth.register import registerPrompt
-from formee.auth.user_jwt import get_user_jwt
 from formee.auth.visitor_settings import load_visitor_settings
 
 

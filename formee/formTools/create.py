@@ -27,7 +27,7 @@ def create_form() -> None:
     }
     yaml.dump(form, open(initial_details['name'].lower(
     ).strip().replace(' ', '-') + '.yaml', 'w'))
-    print(f"[bold]Form created successfully.")
+    print(f"[green]Form created successfully.")
 
 
 def create_questions() -> list:
