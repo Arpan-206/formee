@@ -67,7 +67,6 @@ def get_form_details(id: int) -> dict:
 
 def fill_prompt() -> dict:
     """
-
     Returns:
         dict: Data of the form
     """

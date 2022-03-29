@@ -85,7 +85,6 @@ mutation AddChoices($question: uuid!, $title: String!) {
 
 def deploy() -> Any:
     """
-
     Returns:
         Any: None if unsuccessful, else the form id
     """

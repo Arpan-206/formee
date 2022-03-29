@@ -51,7 +51,7 @@ formee
 3. You're good to go.
 
 ## Learn
-If you want to learn how to use Formee, then you can visit []().
+If you want to learn how to use Formee, then you can visit [the learn segment in the docs](https://docs.formee.hackersreboot.tech/learn/01-getting%20started).
 ## Documentation
 Access the Documentation over 
 [here](https://docs.formee.hackersreboot.tech/).
