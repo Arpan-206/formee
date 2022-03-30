@@ -12,7 +12,6 @@ Formee is a tool that provides an easy way to create, edit and manage all of you
 [![Python 3.8 or above](https://img.shields.io/badge/python-%5E3.8-blue)](https://python.org/)
 [![Hasura](https://img.shields.io/badge/Built%20With-Hasura-yellowgreen)](https://hasura.io)
 
-
 ## Installation
 
 1. Install *formee* with pip
@@ -75,9 +74,13 @@ Access the Documentation over
 ## Authors
 - [@Arpan-206](https://github.com/Arpan-206)
 
+### ProductHunt Listing
+<a href="https://www.producthunt.com/posts/formee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-formee" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=338228&theme=dark" alt="Formee - An&#0032;intuitive&#0032;CLI&#0032;to&#0032;create&#0044;&#0032;manage&#0032;and&#0032;fill&#0032;forms | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 
 ## Feedback
 If you have any feedback, please reach out to us at arpan@hackersreboot.tech.
+
 
 
 ## Contributing
