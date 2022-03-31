@@ -6,7 +6,7 @@ The following sections are the ones currently supported and you are advised to u
 
 | Version   | Supported          |
 | -------   | ------------------ |
-| 0.1.5     | :white_check_mark: |
+| 0.1.6     | :white_check_mark: |
 | 0.1.4     | :white_check_mark: |
 | 0.1.3     | :x:                |
 | < 0.1.2   | :x:                |

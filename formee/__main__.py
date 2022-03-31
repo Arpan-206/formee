@@ -81,7 +81,7 @@ def main() -> None:
     answers = prompt(action)
     # Checking the answers
     if answers['action'] == 'Exit':
-        sys.exit(1)
+        sys.exit(0)
     elif answers['action'] == 'Create a new form':
         from formee.formTools.create import create_form
         create_form()

@@ -1,4 +1,4 @@
-import hashlib
+from argon2 import PasswordHasher
 
 
 def hash_password(password: str) -> str:
@@ -9,4 +9,5 @@ def hash_password(password: str) -> str:
     Returns:
         str: Hashed password
     """
-    return hashlib.sha256(password.encode('utf-8')).hexdigest()
+    ph = PasswordHasher()
+    return ph.hash(password)
