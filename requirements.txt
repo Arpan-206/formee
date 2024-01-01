@@ -293,7 +293,7 @@ multidict==6.0.2; python_version >= "3.7" \
     --hash=sha256:23b616fdc3c74c9fe01d76ce0d1ce872d2d396d8fa8e4899398ad64fb5aa214a \
     --hash=sha256:4bae31803d708f6f15fd98be6a6ac0b6958fcf68fda3c77a048a4f9073704aae \
     --hash=sha256:5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013
-prompt-toolkit==1.0.14 \
+prompt-toolkit==3.0.13 \
     --hash=sha256:82c7f8e07d7a0411ff5367a5a8ff520f0112b9179f3e599ee8ad2ad9b943d911 \
     --hash=sha256:7281b5199235adaef6980942840c43753e4ab20dfe41338da634fb41c194f9d8 \
     --hash=sha256:cc66413b1b4b17021675d9f2d15d57e640b06ddfd99bb724c73484126d22622f
