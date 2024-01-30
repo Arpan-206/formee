@@ -1,4 +1,4 @@
-aiohttp==3.8.1; python_version >= "3.6" \
+aiohttp==3.9.2; python_version >= "3.6" \
     --hash=sha256:1ed0b6477896559f17b9eaeb6d38e07f7f9ffe40b9f0f9627ae8b9926ae260a8 \
     --hash=sha256:7dadf3c307b31e0e61689cbf9e06be7a867c563d5a63ce9dca578f956609abf8 \
     --hash=sha256:a79004bb58748f31ae1cbe9fa891054baaa46fb106c2dc7af9f8e3304dc30316 \
