@@ -1,4 +1,4 @@
-aiohttp==3.8.1; python_version >= "3.6" \
+aiohttp==3.9.2; python_version >= "3.6" \
     --hash=sha256:1ed0b6477896559f17b9eaeb6d38e07f7f9ffe40b9f0f9627ae8b9926ae260a8 \
     --hash=sha256:7dadf3c307b31e0e61689cbf9e06be7a867c563d5a63ce9dca578f956609abf8 \
     --hash=sha256:a79004bb58748f31ae1cbe9fa891054baaa46fb106c2dc7af9f8e3304dc30316 \
@@ -303,7 +303,7 @@ pycparser==2.21; python_version >= "3.6" and python_full_version < "3.0.0" or py
 pyfiglet==0.8.post1 \
     --hash=sha256:d555bcea17fbeaf70eaefa48bb119352487e629c9b56f30f383e2c62dd67a01c \
     --hash=sha256:c6c2321755d09267b438ec7b936825a4910fec696292139e664ca8670e103639
-pygments==2.11.2; python_full_version >= "3.6.2" and python_full_version < "4.0.0" and python_version >= "3.5" \
+pygments==2.15.0; python_full_version >= "3.6.2" and python_full_version < "4.0.0" and python_version >= "3.5" \
     --hash=sha256:44238f1b60a76d78fc8ca0528ee429702aae011c265fe6a8dd8b63049ae41c65 \
     --hash=sha256:4e426f72023d88d03b2fa258de560726ce890ff3b630f88c21cbb8b2503b8c6a
 pyinquirer==1.0.3 \
